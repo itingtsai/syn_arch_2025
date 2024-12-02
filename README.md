@@ -1,4 +1,4 @@
-## 3D Synthesis for Architectural Design
+## 3D Synthesis for Architectural Design (WACV 2025)
 
 This is the repository that contains source code for the [syn_arch website](https://itingtsai.github.io/syn_arch_2025).
 
