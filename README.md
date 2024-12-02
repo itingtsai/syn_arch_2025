@@ -1,6 +1,6 @@
 # 3D Synthesis for Architectural Design
 
-This is the repository that contains source code for the [syn_arch website](https://syn_arch.github.io).
+This is the repository that contains source code for the [syn_arch website](https://itingtsai.github.io/syn_arch_2025).
 
 If you find syn_arch useful for your work please cite:
 ```
