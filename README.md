@@ -2,7 +2,7 @@
 
 This is the repository that contains source code for the [syn_arch website](https://itingtsai.github.io/syn_arch_2025).
 
-If you find syn_arch useful for your work please cite:
+If you find syn_arch useful, please cite:
 ```
 @article{tsai2025syn_arch
   author    = {Tsai, I-Ting and Hariharan, Bharath},
