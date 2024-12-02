@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D Synthesis for Architectural Design</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/tetris.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">3D Synthesis for Architectural Design</h1>
+          <h2 class="title is-size-4 publication-title">WACV 2025</h2>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="" style="color: #ee3d96 !important;">I-Ting Tsai</a>,</span>
+            <span class="author-block">
+              <a href="https://www.cs.cornell.edu/~bharathh/" style="color: #ee3d96 !important;">Bharath Hariharan</a></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Cornell University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/itingtsai/syn_arch"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="content has-text-centered" >
+
+      <div class="columns is-centered is-vcentered" style="margin-bottom: 0px; padding-bottom: 0px;">
+        <!-- First Column: Image -->
+        <div class="column is-one-third">
+          <div class="content">
+            <h2 class="title is-size-5 has-text-centered">ProlificDreamer</h2>
+              <video id="matting-video" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 10px;">
+                <source src="./static/videos/prolificdreamer.mp4" type="video/mp4">
+              </video>
+          </div>
+        </div>
+        
+        <!-- Second Column: Video -->
+        <div class="column is-one-third">
+          <div class="content">
+            <h2 class="title is-size-5 has-text-centered" style="color: #ee3d96 !important;">Ours</h2>
+            <video id="matting-video" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 10px;">
+              <source src="./static/videos/video_14.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        
+        <!-- Third Column: Image -->
+        <div class="column is-one-third">
+          <div class="content">
+            <h2 class="title is-size-5 has-text-centered">Dreamfusion-Hifa</h2>
+              <video id="matting-video" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 10px;">
+                <source src="./static/videos/dreamfusion_hifa.mp4" type="video/mp4">
+              </video>
+          </div>
+        </div>
+      </div>
+      <p>
+        "A stand-alone house, crafted with high-tech architecture and composite materials, features openings. It is depicted in a photorealistic style from a side view at a street corner, bathed in the glow of the northern light."
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="content has-text-centered" >
+
+      <div class="columns is-centered is-vcentered" style="margin-bottom: 0px; padding-bottom: 0px;">
+        <!-- First Column: Image -->
+        <div class="column is-one-third">
+          <div class="content">
+            <h2 class="title is-size-5 has-text-centered">MVDream</h2>
+              <video id="matting-video" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 10px;">
+                <source src="./static/videos/mvdream.mp4" type="video/mp4">
+              </video>
+          </div>
+        </div>
+        
+        <!-- Second Column: Video -->
+        <div class="column is-one-third">
+          <div class="content">
+            <h2 class="title is-size-5 has-text-centered" style="color: #ee3d96 !important;">Ours</h2>
+            <video id="matting-video" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 10px;">
+              <source src="./static/videos/video_2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        
+        <!-- Third Column: Image -->
+        <div class="column is-one-third">
+          <div class="content">
+            <h2 class="title is-size-5 has-text-centered">Dreamfusion-Hifa</h2>
+              <video id="matting-video" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 10px;">
+                <source src="./static/videos/dreamfusion_hifa_8.mp4" type="video/mp4">
+              </video>
+          </div>
+        </div>
+      </div>
+      <p>
+        "A house showcasing vintage aesthetics is captured in a lifelike, two-point perspective with dynamic glass and moody lighting, nestled within a wetland setting."
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="content has-text-centered" >
+
+      <div class="columns is-centered is-vcentered" style="margin-bottom: 0px; padding-bottom: 0px;">
+        <!-- First Column: Image -->
+        <div class="column is-one-third">
+          <div class="content">
+            <h2 class="title is-size-5 has-text-centered">MVDream</h2>
+              <video id="matting-video" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 10px;">
+                <source src="./static/videos/mvdream_7.mp4" type="video/mp4">
+              </video>
+          </div>
+        </div>
+        
+        <!-- Second Column: Video -->
+        <div class="column is-one-third">
+          <div class="content">
+            <h2 class="title is-size-5 has-text-centered" style="color: #ee3d96 !important;">Ours</h2>
+            <video id="matting-video" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 10px;">
+              <source src="./static/videos/video_2_mid.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        
+        <!-- Third Column: Image -->
+        <div class="column is-one-third">
+          <div class="content">
+            <h2 class="title is-size-5 has-text-centered">Magic3D</h2>
+              <video id="matting-video" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 10px;">
+                <source src="./static/videos/magic3d_7.mp4" type="video/mp4">
+              </video>
+          </div>
+        </div>
+      </div>
+      <p>
+        "A stand-alone building, crafted with organic architecture and ceramic detailing, features large windows. It is depicted in a photorealistic style from a two-point perspective, nestled in an autumn setting and bathed in direct sunlight."
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="content has-text-centered" >
+
+      <div class="columns is-centered is-vcentered" style="margin-bottom: 0px; padding-bottom: 0px;">
+        <!-- First Column: Image -->
+        <div class="column is-one-third">
+          <div class="content">
+            <h2 class="title is-size-5 has-text-centered">TextMesh</h2>
+              <video id="matting-video" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 10px;">
+                <source src="./static/videos/textMesh_4.mp4" type="video/mp4">
+              </video>
+          </div>
+        </div>
+        
+        <!-- Second Column: Video -->
+        <div class="column is-one-third">
+          <div class="content">
+            <h2 class="title is-size-5 has-text-centered" style="color: #ee3d96 !important;">Ours</h2>
+            <video id="matting-video" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 10px;">
+              <source src="./static/videos/video_6_tall.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        
+        <!-- Third Column: Image -->
+        <div class="column is-one-third">
+          <div class="content">
+            <h2 class="title is-size-5 has-text-centered">Magic3D</h2>
+              <video id="matting-video" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 10px;">
+                <source src="./static/videos/magic3d_4.mp4" type="video/mp4">
+              </video>
+          </div>
+        </div>
+      </div>
+      <p>
+        "A futuristic building with a prominent large glass window, set in a desert landscape surrounded by a variety of cacti and desert flora, bathed in sunset."
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="title is-size-5 has-text-centered" style="color: #ee3d96 !important;">Ours: User-input Shape & Design Variations</h2>
+  <div class="container is-max-desktop">
+    <div class="content has-text-centered" >
+
+      <div class="columns is-centered is-vcentered" style="margin-bottom: 0px; padding-bottom: 0px;">
+        <!-- First Column: Image -->
+        <div class="column is-one-third">
+          <div class="content">
+            <video id="matting-video" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 10px;">
+              <source src="./static/videos/video_15.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        
+        <!-- Second Column: Video -->
+        <div class="column is-one-third">
+          <div class="content">
+            <video id="matting-video" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 10px;">
+              <source src="./static/videos/video_13.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        
+        <!-- Third Column: Image -->
+        <div class="column is-one-third">
+          <div class="content">
+            <video id="matting-video" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 10px;">
+              <source src="./static/videos/video_11.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+       </div>
+       <p>
+        "A photorealistic modern wooden house, designed in an industrial style, set on grassland."
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We introduce a 3D synthesis method for architectural design to allow for the efficient generation of diverse and precise building designs. 
+In spite of advances in 3D synthesis, current off-the-shelf 3D synthesis techniques are inappropriate for architectural design: they are trained primarily on isolated objects, have limited diversity, blend building facades with background and produce overly complex geometry that is difficult to edit or manipulate, a major issue in an iterative design process.
+          </p>
+          <p>
+            We propose an alternative pipeline that integrates auto-generated coarse models with segment-wise texture inpainting, resulting in diverse, style-consistent, and shape-precise designs. 
+We show through qualitative and quantitative experiments that our pipeline generates more diverse, visually appealing architectures with clean geometries without the need for any extensive training.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="title is-3 has-text-centered">Method</h2>
+  <div class="container is-max-desktop has-text-centered">
+    <img src="./static/images/web_figure.jpg" alt="Description of Image" class="centered-image">
+  </div>
+  <div class="container is-max-desktop has-text-centered">
+    <img src="./static/images/web_figure2.jpg" alt="Description of Image" class="centered-image">
+  </div>
+</section>
+
+<!--
+<section class="section">
+  <h2 class="title is-3 has-text-centered">Result</h2>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered is-vcentered">
+      
+      <div class="column is-one-third">
+        <div class="content">
+          <img src="./static/images/geometry_input_frame.png" alt="Visual Effects" class="media-image" style="margin-bottom: 10px;">
+        
+          <p class="has-text-centered">
+            Auto-generated CSG
+          </p>
+        </div>
+      </div>
+      
+      <div class="column is-one-third">
+        <div class="content">
+          <video id="matting-video" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 10px;">
+            <source src="./static/videos/video_16.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">
+            3D Synthesis
+          </p>
+        </div>
+      </div>
+      
+      <div class="column is-one-third">
+        <div class="content">
+          <img src="./static/images/geometry_frame.png" alt="Geometry Output" class="media-image" style="margin-bottom: 10px;">
+        
+          <p class="has-text-centered">
+            Geometry Output
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+-->
+
+<section class="section">
+  <h2 class="title is-3 has-text-centered">Comparison of Automatic Detail Editing Results</h2>
+  <div class="container is-max-desktop">
+
+    <div class="content has-text-centered">
+      <h2 class="title is-size-5 has-text-centered" style="color: #ee3d96 !important;">Ours</h2>
+      <div class="columns is-centered is-vcentered">
+        
+        <!-- First Column: Image -->
+        <div class="column is-one-third">
+          <div class="content">
+            <img src="./static/images/geometry_input_frame.png" alt="Visual Effects" class="media-image" style="margin-bottom: 10px;">
+          
+            <p class="has-text-centered">
+              Auto-generated CSG
+            </p>
+          </div>
+        </div>
+        
+        <!-- Second Column: Video -->
+        <div class="column is-one-third">
+          <div class="content">
+            <video id="matting-video" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 10px;">
+              <source src="./static/videos/video_16.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered">
+              3D Synthesis
+            </p>
+          </div>
+        </div>
+        
+        <!-- Third Column: Image -->
+        <div class="column is-one-third">
+          <div class="content">
+            <img src="./static/images/geometry_frame.png" alt="Geometry Output" class="media-image" style="margin-bottom: 10px;">
+          
+            <p class="has-text-centered">
+              Geometry Output
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="title is-size-5 has-text-centered">Sketch-Nerf <sub>(&lambda;<sub>SDS</sub> = 1.0)</sub></h2>
+      <div class="columns is-centered is-vcentered">
+        <!-- First Column: Image -->
+        <div class="column is-one-third">
+          <div class="content">
+            <img src="./static/images/geometry_input_frame.png" alt="Visual Effects" class="media-image" style="margin-bottom: 10px;">
+          
+            <p class="has-text-centered">
+              CSG Input
+            </p>
+          </div>
+        </div>
+        
+        <!-- Second Column: Video -->
+        <div class="column is-one-third">
+          <div class="content">
+            <video id="matting-video" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 10px;">
+              <source src="./static/videos/sketchnerf.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered">
+              3D Synthesis
+            </p>
+          </div>
+        </div>
+        
+        <!-- Third Column: Image -->
+        <div class="column is-one-third">
+          <div class="content">
+            <img src="./static/images/geometry_sketchnerf_1_frame.png" alt="Geometry Output" class="media-image" style="margin-bottom: 10px;">
+          
+            <p class="has-text-centered">
+              Geometry Output
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="title is-size-5 has-text-centered">Fantasia3D <sub>(&lambda;<sub>SDS</sub> = 1.0)</sub></h2>
+      <div class="columns is-centered is-vcentered">
+        
+        <!-- First Column: Image -->
+        <div class="column is-one-third">
+          <div class="content">
+            <img src="./static/images/geometry_input_frame.png" alt="Visual Effects" class="media-image" style="margin-bottom: 10px;">
+          
+            <p class="has-text-centered">
+              CSG Input
+            </p>
+          </div>
+        </div>
+        
+        <!-- Second Column: Video -->
+        <div class="column is-one-third">
+          <div class="content">
+            <video id="matting-video" autoplay controls muted loop playsinline width="100%" style="margin-bottom: 10px;">
+              <source src="./static/videos/fantasia.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered">
+              3D Synthesis
+            </p>
+          </div>
+        </div>
+        
+        <!-- Third Column: Image -->
+        <div class="column is-one-third">
+          <div class="content">
+            <img src="./static/images/geometry_fantasia_1_frame.png" alt="Geometry Output" class="media-image" style="margin-bottom: 10px;">
+          
+            <p class="has-text-centered">
+              Geometry Output
+            </p>
+          </div>
+        </div>
+      </div>
+      <p>
+        "A stand-alone house, crafted with high-tech architecture and composite materials, features openings. It is depicted in a photorealistic style from a side view at a street corner, bathed in the glow of the northern light."
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{tsai2025syn_arch,
+  author    = {Tsai, I-Ting and Hariharan, Bharath},
+  title     = {3D Synthesis for Architectural Design},
+  journal   = {WACV},
+  year      = {2025},
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/itingtsai/" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            This website template is borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
