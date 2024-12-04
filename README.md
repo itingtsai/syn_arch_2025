@@ -3,12 +3,14 @@
 This is the repository that contains source code for the [syn_arch_2025 website](https://itingtsai.github.io/syn_arch_2025).
 
 If you find syn_arch useful, please cite:
-```
-@article{tsai2025syn_arch
+
+```tex
+@inproceedings{tsai2025syn_arch,
   author    = {Tsai, I-Ting and Hariharan, Bharath},
-  title     = {3D Synthesis for Architectural Design},
-  journal   = {WACV},
+  title     = {{3D} Synthesis for Architectural Design},
+  booktitle = {Winter Conference on Applications of Computer Vision (WACV)},
   year      = {2025},
+  note      = {To appear}
 }
 ```
 
