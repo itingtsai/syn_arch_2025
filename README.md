@@ -8,7 +8,7 @@ If you find syn_arch useful, please cite:
 @inproceedings{tsai2025syn_arch,
   author    = {Tsai, I-Ting and Hariharan, Bharath},
   title     = {{3D} Synthesis for Architectural Design},
-  booktitle = {Winter Conference on Applications of Computer Vision (WACV)},
+  booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
   year      = {2025},
   note      = {To appear}
 }
