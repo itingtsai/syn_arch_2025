@@ -5,14 +5,13 @@ This is the repository that contains source code for the [syn_arch_2025 website]
 If you find syn_arch useful, please cite:
 
 ```tex
-@inproceedings{Tsai_2025_WACV,
-  author    = {Tsai, I-Ting and Hariharan, Bharath},
-  title     = {{3D} Synthesis for Architectural Design},
-  booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
-  month     = {January},
-  year      = {2025},
-  pages     = {To appear}
-  note      = {To appear}
+@InProceedings{Tsai_2025_WACV,
+    author    = {Tsai, I-Ting and Hariharan, Bharath},
+    title     = {3D Synthesis for Architectural Design},
+    booktitle = {Proceedings of the Winter Conference on Applications of Computer Vision (WACV)},
+    month     = {February},
+    year      = {2025},
+    pages     = {4799-4809}
 }
 ```
 
